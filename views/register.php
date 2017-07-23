@@ -30,6 +30,26 @@
     </style>
 </head>
 <body>
+<?php
+/*
+ * 后端通过传递变量auth，来决定本页是否对用户开放
+ * */
+if($auth == 0) {
+    echo <<< START
+        <div class="row" style="margin-left: 60px; margin-right: 60px; margin-top: 30px">
+            <div class="col-md-8">
+                <div class="alert alert-danger">
+                    <h2 class="text-danger">你没有添加用户的权限</h2>
+                        <button class="btn btn-default" onclick="back()">返回</button>
+                </div>
+            </div>
+        </div>
+START;
+
+    exit();
+}
+?>
+
 <div class="container main-container">
     <?php
     /*
