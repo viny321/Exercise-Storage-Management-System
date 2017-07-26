@@ -33,7 +33,7 @@
 <?php
 /*
  * 后端通过传递变量auth，来决定本页是否对用户开放
- * */
+ *  */
 if($auth == 0) {
     echo <<< START
         <div class="row" style="margin-left: 60px; margin-right: 60px; margin-top: 30px">
